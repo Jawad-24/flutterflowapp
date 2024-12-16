@@ -118,33 +118,35 @@ class _QuizpageWidgetState extends State<QuizpageWidget>
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
-          title: Text(
-            'Daily Quiz',
-            style: FlutterFlowTheme.of(context).displaySmall.override(
-                  fontFamily: 'Inter Tight',
-                  letterSpacing: 0.0,
-                ),
-          ),
-          actions: [
-            Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
-              child: FlutterFlowIconButton(
-                borderColor: Colors.transparent,
-                borderRadius: 30.0,
-                borderWidth: 1.0,
-                buttonSize: 50.0,
-                fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                icon: Icon(
-                  Icons.close_rounded,
-                  color: FlutterFlowTheme.of(context).secondaryText,
-                  size: 30.0,
-                ),
-                onPressed: () {
-                  print('IconButton pressed ...');
-                },
+          leading: Padding(
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
+            child: FlutterFlowIconButton(
+              borderColor: Colors.transparent,
+              borderRadius: 30.0,
+              borderWidth: 1.0,
+              buttonSize: 50.0,
+              fillColor: FlutterFlowTheme.of(context).primaryBackground,
+              icon: const Icon(
+                Icons.close_rounded,
+                color: Colors.black,
+                size: 30.0,
               ),
+              onPressed: () {
+                print('IconButton pressed ...');
+              },
             ),
-          ],
+          ),
+          title: Align(
+            alignment: const AlignmentDirectional(-1.2, 0.0),
+            child: Text(
+              'Daily Quiz',
+              style: FlutterFlowTheme.of(context).headlineMedium.override(
+                    fontFamily: 'Inter Tight',
+                    letterSpacing: 0.0,
+                  ),
+            ),
+          ),
+          actions: const [],
           centerTitle: false,
           elevation: 0.0,
         ),

@@ -42,7 +42,7 @@ class _QuizscreenWidgetState extends State<QuizscreenWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primary,
+          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
           leading: Row(
             mainAxisSize: MainAxisSize.max,
@@ -54,28 +54,29 @@ class _QuizscreenWidgetState extends State<QuizscreenWidget> {
                 buttonSize: 60.0,
                 icon: const Icon(
                   Icons.arrow_back_rounded,
-                  color: Colors.white,
+                  color: Colors.black,
                   size: 30.0,
                 ),
                 onPressed: () {
                   print('IconButton pressed ...');
                 },
               ),
-              Text(
-                'Quiz',
-                textAlign: TextAlign.start,
-                style: FlutterFlowTheme.of(context).headlineMedium.override(
-                      fontFamily: 'Inter Tight',
-                      color: Colors.white,
-                      fontSize: 22.0,
-                      letterSpacing: 0.0,
-                    ),
+              Align(
+                alignment: const AlignmentDirectional(-1.2, 0.0),
+                child: Text(
+                  'Quiz',
+                  textAlign: TextAlign.start,
+                  style: FlutterFlowTheme.of(context).headlineMedium.override(
+                        fontFamily: 'Inter Tight',
+                        letterSpacing: 0.0,
+                      ),
+                ),
               ),
             ],
           ),
           actions: const [],
-          centerTitle: true,
-          elevation: 2.0,
+          centerTitle: false,
+          elevation: 0.0,
         ),
         body: SafeArea(
           top: true,

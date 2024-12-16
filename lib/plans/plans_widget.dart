@@ -57,12 +57,15 @@ class _PlansWidgetState extends State<PlansWidget> {
               context.pushNamed('result');
             },
           ),
-          title: Text(
-            'Plans',
-            style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter Tight',
-                  letterSpacing: 0.0,
-                ),
+          title: Align(
+            alignment: const AlignmentDirectional(-1.2, 0.0),
+            child: Text(
+              'Plans',
+              style: FlutterFlowTheme.of(context).headlineMedium.override(
+                    fontFamily: 'Inter Tight',
+                    letterSpacing: 0.0,
+                  ),
+            ),
           ),
           actions: const [],
           centerTitle: false,
